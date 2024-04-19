@@ -1,0 +1,10 @@
+-   id: bibtex-tidy
+    name: bibtex-tidy
+    description: ''
+    entry: bibtex-tidy
+    language: node
+    'types': ['bib']
+    args: []
+    require_serial: false
+    additional_dependencies: ["bibtex-tidy@1.11.0"]
+    minimum_pre_commit_version: '0'
