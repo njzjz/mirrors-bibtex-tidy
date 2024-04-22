@@ -3,7 +3,7 @@
     description: ''
     entry: bibtex-tidy
     language: node
-    'types': [javascript]
+    'types': [bib]
     args: []
     require_serial: false
     additional_dependencies: ["bibtex-tidy@1.13.0"]
