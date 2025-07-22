@@ -12,7 +12,10 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-python@v5
-    - run: pip install pre-commit-mirror-maker
+    - uses: astral-sh/setup-uv@v6
+      with:
+        enable-cache: true
+    - run: uv pip install pre-commit-mirror-maker
     - run: git config --global user.name 'Github Actions'
     - run: git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
     - run: pre-commit-mirror . --language=node --package-name=bibtex-tidy --types=bib
