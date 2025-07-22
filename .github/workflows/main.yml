@@ -17,7 +17,7 @@ jobs:
         enable-cache: true
     - run: git config --global user.name 'Github Actions'
     - run: git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
-    - run: uvx pre-commit-mirror . --language=node --package-name=bibtex-tidy --types=bib
+    - run: uvx --from pre-commit-mirror-maker pre-commit-mirror . --language=node --package-name=bibtex-tidy --types=bib
     - run: |
         git remote set-url origin https://x-access-token:$GH_TOKEN@github.com/$GITHUB_REPOSITORY
         git push origin HEAD:refs/heads/main --tags
